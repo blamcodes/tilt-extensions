@@ -48,7 +48,7 @@ for i in range(image_count):
       flags.extend(['--set', '%s=%s' % (key1, image_parts["repository"])])
     flags.extend(['--set', '%s=%s' % (key2, image_parts["tag"])])
 
-install_cmd = ['helm', 'upgrade', '--install']
+install_cmd = ['helm', 'secrets', 'upgrade', '--install']
 install_cmd.extend(flags)
 
 get_cmd = ['helm', 'get', 'manifest']
